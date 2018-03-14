@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DocTypeData xmlns="">
+  <DocTypeInfo>
+    <DocName>Office Document</DocName>
+    <Path>$/Templates/Office</Path>
+  </DocTypeInfo>
+  <DocTypeInfo>
+    <DocName>Dokumentensatz</DocName>
+    <Path>$/Templates/Plotsatz</Path>
+  </DocTypeInfo>
+</DocTypeData>
