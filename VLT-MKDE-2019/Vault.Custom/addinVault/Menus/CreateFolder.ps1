@@ -9,7 +9,7 @@
 $folderId = $vaultContext.CurrentSelectionSet[0].Id
 $vaultContext.ForceRefresh = $true
 $dialog = $dsCommands.GetCreateFolderDialog($folderId)
-$xamlFile = New-Object CreateObject.WPF.XamlFile "testxaml", "%ProgramData%\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\Configuration\Folder.xaml"
+$xamlFile = New-Object CreateObject.WPF.XamlFile "testxaml", "%ProgramData%\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Folder.xaml"
 $dialog.XamlFile = $xamlFile
 
 $result = $dialog.Execute()
@@ -73,7 +73,7 @@ if($result)
 	}
 
 	#endregion
-	[System.Reflection.Assembly]::LoadFrom("C:\Program Files\Autodesk\Vault Professional 2018\Explorer\Autodesk.Connectivity.Explorer.Extensibility.dll")
+	[System.Reflection.Assembly]::LoadFrom("C:\Program Files\Autodesk\Vault Professional 2019\Explorer\Autodesk.Connectivity.Explorer.Extensibility.dll")
 	$selectionId = [Autodesk.Connectivity.Explorer.Extensibility.SelectionTypeId]::Folder
 	$location = New-Object Autodesk.Connectivity.Explorer.Extensibility.LocationContext $selectionId, $path
 	$vaultContext.GoToLocation = $location

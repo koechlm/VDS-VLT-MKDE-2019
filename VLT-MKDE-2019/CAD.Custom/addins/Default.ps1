@@ -1,6 +1,6 @@
 ﻿#=============================================================================#
 # PowerShell script sample for Vault Data Standard                            #
-#			 Autodesk Vault - Quickstart 2018  								  #
+#			 Autodesk Vault - Quickstart 2019  								  #
 # This sample is based on VDS 2018 RTM and adds functionality and rules       #
 # All additions are marked with 'region Quickstart' - 'endregion'			  #
 #                                                                             #
@@ -78,7 +78,7 @@ function InitializeWindow
 		{
 			#region Quickstart
 			#	there are some custom functions to enhance functionality:
-			[System.Reflection.Assembly]::LoadFrom($Env:ProgramData + "\Autodesk\Vault 2018\Extensions\DataStandard" + '\Vault.Custom\addinVault\QuickstartUtilityLibrary.dll')
+			[System.Reflection.Assembly]::LoadFrom($Env:ProgramData + "\Autodesk\Vault 2019\Extensions\DataStandard" + '\Vault.Custom\addinVault\QuickstartUtilityLibrary.dll')
 
 			#	initialize the context for Drawings or presentation files as these have Vault Option settings
 			$global:mGFN4Special = $Prop["_GenerateFileNumber4SpecialFiles"].Value
@@ -86,7 +86,7 @@ function InitializeWindow
 			{
 				$dsWindow.FindName("GFN4Special").IsChecked = $true # this checkbox is used by the XAML dialog styles, to enable / disable or show / hide controls
 			}
-			$mGFN4STypes = ("IDW", "DWG", "IPN") #to compare that the current new file is one of the special files the option applies to
+			$mGFN4STypes = (".IDW", ".DWG", ".IPN") #to compare that the current new file is one of the special files the option applies to
 			if ($mGFN4STypes -contains $Prop["_FileExt"].Value) {
 				$global:mIsGFN4 = $true
 				$dsWindow.FindName("IsGFN4Type").IsChecked = $true
@@ -115,7 +115,7 @@ function InitializeWindow
 					{
 						switch($Prop["_FileExt"].Value)
 						{
-							"ipt"
+							".ipt"
 							{
 								#differentiate sheet metal subtype first
 								If ($Document.SubType -eq "{9C464203-9BAE-11D3-8BAD-0060B0CE6BB4}")
@@ -124,19 +124,19 @@ function InitializeWindow
 								}
 								Else { $Prop["_Category"].Value = "Bauteil" }
 							}
-							"iam" 
+							".iam" 
 							{
 								$Prop["_Category"].Value = "Baugruppe"
 							}
-							"ipn"
+							".ipn"
 							{
 								$Prop["_Category"].Value = "Präsentation"
 							}
-							"idw"
+							".idw"
 							{
 								$Prop["_Category"].Value = "Zeichnung Inventor"
 							}
-							"dwg"
+							".dwg"
 							{
 								$Prop["_Category"].Value = "Zeichnung Inventor"
 							}
@@ -215,10 +215,10 @@ function InitializeWindow
 					# but don't do this, if the copy mode is active
 					if ($Prop["_CopyMode"].Value -eq $false) 
 					{
-						if (($Prop["_FileExt"].Value -eq "idw") -or ($Prop["_FileExt"].Value -eq "dwg" )) 
+						if (($Prop["_FileExt"].Value -eq ".idw") -or ($Prop["_FileExt"].Value -eq ".dwg" )) 
 						{
-							$_mInvHelpers = New-Object QuickstartUtilityLibrary.InvHelpers #NEW 2018 hand over the parent inventor application, to ensure the correct instance
-							$_ModelFullFileName = $_mInvHelpers.m_GetMainViewModelPath($Application)#NEW 2018 hand over the parent inventor application, to ensure the correct instance
+							$_mInvHelpers = New-Object QuickstartUtilityLibrary.InvHelpers #NEW 2019 hand over the parent inventor application, to ensure the correct instance
+							$_ModelFullFileName = $_mInvHelpers.m_GetMainViewModelPath($Application)#NEW 2019 hand over the parent inventor application, to ensure the correct instance
 							$Prop["Title"].Value = $_mInvHelpers.m_GetMainViewModelPropValue($Application, $_ModelFullFileName,"Title")
 							$Prop["Description"].Value = $_mInvHelpers.m_GetMainViewModelPropValue($Application, $_ModelFullFileName,"Description")
 							$Prop["Part Number"].Value = $_mInvHelpers.m_GetMainViewModelPropValue($Application, $_ModelFullFileName,"Part Number") 
@@ -242,10 +242,10 @@ function InitializeWindow
 							}
 						}
 						
-						if ($Prop["_FileExt"].Value -eq "ipn") 
+						if ($Prop["_FileExt"].Value -eq ".ipn") 
 						{
-							$_mInvHelpers = New-Object QuickstartUtilityLibrary.InvHelpers #NEW 2018 hand over the parent inventor application, to ensure the correct instance
-							$_ModelFullFileName = $_mInvHelpers.m_GetMainViewModelPath($Application)#NEW 2018 hand over the parent inventor application, to ensure the correct instance
+							$_mInvHelpers = New-Object QuickstartUtilityLibrary.InvHelpers #NEW 2019 hand over the parent inventor application, to ensure the correct instance
+							$_ModelFullFileName = $_mInvHelpers.m_GetMainViewModelPath($Application)#NEW 2019 hand over the parent inventor application, to ensure the correct instance
 							$Prop["Title"].Value = $_mInvHelpers.m_GetMainViewModelPropValue($Application, $_ModelFullFileName,"Title")
 							$Prop["Description"].Value = $_mInvHelpers.m_GetMainViewModelPropValue($Application, $_ModelFullFileName,"Description")
 							$Prop["Part Number"].Value = $_mInvHelpers.m_GetMainViewModelPropValue($Application, $_ModelFullFileName,"Part Number")
@@ -272,7 +272,7 @@ function InitializeWindow
 						}
 					} # end of copy mode = false check
 
-					if ($Prop["_CopyMode"].Value -and @("DWG","IDW","IPN") -contains $Prop["_FileExt"].Value)
+					if ($Prop["_CopyMode"].Value -and @(".DWG",".IDW",".IPN") -contains $Prop["_FileExt"].Value)
 					{
 						$mCatName = GetCategories | Where {$_.Name -eq $UIString["MSDCE_CAT00"]} #Drawing Inventor
 						IF ($mCatName) { $Prop["_Category"].Value = $UIString["MSDCE_CAT00"]}
@@ -379,7 +379,7 @@ function InitializeWindow
 				If ($dsWindow.FindName("tabTermsCatalog"))
 				{			
 					Try{
-						Import-Module -FullyQualifiedName "C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\addinVault\CatalogTermsTranslations.psm1"
+						Import-Module -FullyQualifiedName "C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\CatalogTermsTranslations.psm1"
 					}
 					catch{
 						$dsWindow.FindName("tabTermsCatalog").Visibility = "Collapsed"
@@ -441,10 +441,10 @@ function AddinLoaded
 {
 	#Executed when DataStandard is loaded in Inventor/AutoCAD
 	#region Quickstart
-		$m_File = $env:TEMP + "\Folder2018.xml"
+		$m_File = $env:TEMP + "\Folder2019.xml"
 		if (!(Test-Path $m_File)){
-			$source = $Env:ProgramData + "\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\Folder2018.xml"
-			Copy-Item $source $env:TEMP\Folder2018.xml
+			$source = $Env:ProgramData + "\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Folder2019.xml"
+			Copy-Item $source $env:TEMP\Folder2019.xml
 		}
 	#endregion quickstart
 }
@@ -545,7 +545,7 @@ function OnPostCloseDialog
 		"InventorWindow"
 		{
 			#region Quickstart
-				if (!($Prop["_CopyMode"].Value -and !$Prop["_GenerateFileNumber4SpecialFiles"].Value -and @("DWG","IDW","IPN") -contains $Prop["_FileExt"].Value))
+				if (!($Prop["_CopyMode"].Value -and !$Prop["_GenerateFileNumber4SpecialFiles"].Value -and @(".DWG",".IDW",".IPN") -contains $Prop["_FileExt"].Value))
 				{
 					mWriteLastUsedFolder
 				}
@@ -597,7 +597,7 @@ function mHelp ([Int] $mHContext) {
 				$mHPage = "Index.html";
 			}
 		}
-		$mHelpTarget = $Env:ProgramData + "\Autodesk\Vault 2018\Extensions\DataStandard\HelpFiles\"+$mHPage
+		$mHelpTarget = $Env:ProgramData + "\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\"+$mHPage
 		$mhelpfile = Invoke-Item $mHelpTarget 
 	}
 	catch
@@ -613,7 +613,7 @@ function mReadShortCuts {
 		$m_Vault = $VaultConnection.Vault
 		$m_AllFiles = @()
 		$m_FiltFiles = @()
-		$m_Path = $env:APPDATA + '\Autodesk\VaultCommon\Servers\Services_Security_1_6_2017\'
+		$m_Path = $env:APPDATA + '\Autodesk\VaultCommon\Servers\Services_Security_1_16_2018\'
 		$m_AllFiles += Get-ChildItem -Path $m_Path -Filter 'Shortcuts.xml' -Recurse
 		$m_AllFiles | ForEach-Object {
 			if ($_.FullName -like "*"+$m_Server + "*" -and $_.FullName -like "*"+$m_Vault + "*") 
@@ -717,7 +717,7 @@ function mAddShortCutByName([STRING] $mScName)
 	{
 		#$dsDiag.Trace(">> Continue to add ShortCut, creating new from template...")
 		#read from template
-		$m_File = $env:TEMP + "\Folder2018.xml"
+		$m_File = $env:TEMP + "\Folder2019.xml"
 		if (Test-Path $m_File)
 		{
 			#$dsDiag.Trace(">>-- Started to read Folder2017.xml...")
@@ -783,10 +783,10 @@ function mRemoveShortCutByName ([STRING] $mScName)
 
 function mReadLastUsedFolder {
 	#------------- The last used project folder is stored in a XML
-	$m_File = $env:TEMP + "\Folder2018.xml"
+	$m_File = $env:TEMP + "\Folder2019.xml"
 	if (Test-Path $m_File)
 	{
-		#$dsDiag.Trace(">>-- Started to read Folder2018.xml...")
+		#$dsDiag.Trace(">>-- Started to read Folder2019.xml...")
 		$global:m_XML = New-Object XML
 		$global:m_XML.Load($m_File)
 		If($dsWindow.Name -eq "InventorWindow") { $m_xmlNode = $global:m_XML.Folder.get_Item("LastUsedFolderInv")}
@@ -812,7 +812,7 @@ function mReadLastUsedFolder {
 function mWriteLastUsedFolder 
 {
 	#$dsDiag.Trace(">> Save project info...")
-	$m_File = $env:TEMP + "\Folder2018.xml"
+	$m_File = $env:TEMP + "\Folder2019.xml"
 	if (Test-Path $m_File)
 	{
 		try
@@ -834,7 +834,7 @@ function mWriteLastUsedFolder
 					$m_xmlNode.SetAttribute($m_AttribKey,$m_AttribVal)
 				}	
 			}
-			$m_XML.Save($Env:temp + '\Folder2018.xml')
+			$m_XML.Save($Env:temp + '\Folder2019.xml')
 			#$dsDiag.Trace("..saved last used project/folder <<")
 		} #end try
 		catch [System.Exception]
@@ -872,17 +872,17 @@ function mItemLookUpClick1
     $mDocType = $Prop["_FileExt"].Value
         switch($mDocType)
 		{
-			"ipt"
+			".ipt"
 			{
 				$dsWindow.FindName("cmbItemCategories").SelectedValue = "Bauteil"
 			}
 
-			"iam" 
+			".iam" 
 			{
 				$dsWindow.FindName("cmbItemCategories").SelectedValue = "Baugruppe"
 			}
 
-			"idw"
+			".idw"
 			{
 				$dsWindow.FindName("cmbItemCategories").SelectedValue = "Dokument"
 			}

@@ -161,7 +161,7 @@ function mSelectMakeItem {
 			$Prop["Title"].Value = $mSelectedItem.Title
 		}
 		#$dsWindow.FindName("txtPartNumber").Text = $mSelectedItem.Item
-		$dsWindow.FindName("tabFileProp").IsSelected = $true
+		$dsWindow.FindName("tabProperties").IsSelected = $true
 
 		$dsWindow.FindName("btnSearchItem").IsDefault = $false
 		$dsWindow.FindName("btnOK").IsDefault = $true

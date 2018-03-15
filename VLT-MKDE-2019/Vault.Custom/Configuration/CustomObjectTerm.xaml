@@ -381,7 +381,7 @@
                         <Button.Template>
                             <ControlTemplate>
                                 <Border BorderBrush="#FFABADB3" BorderThickness="1">
-                                    <Image x:Name="imgTemplateReset" Source="C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\filter-delete.ico" Margin="2" />
+                                    <Image x:Name="imgTemplateReset" Source="C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\filter-delete.ico" Margin="2" />
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>

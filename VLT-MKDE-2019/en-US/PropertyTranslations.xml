@@ -17,7 +17,7 @@
   <PropertyTranslation Name="CREATED BY">Created By</PropertyTranslation>
   <PropertyTranslation Name="DATE VERSION CREATED">Date Version Created</PropertyTranslation>
   
-  <!--Quickstart 2018 end-->
+  <!--Quickstart 2019 end-->
   <PropertyTranslation Name="SUBJECT">Subject</PropertyTranslation>
   <PropertyTranslation Name="AUTHOR">Author</PropertyTranslation>
   <PropertyTranslation Name="PARTNUMBER">Part Number</PropertyTranslation>
@@ -42,7 +42,7 @@
   <PropertyTranslation Name="EMAILATTACHM">Email Attachment</PropertyTranslation>
   <PropertyTranslation Name="FIRSTNAME">First Name</PropertyTranslation>
   <PropertyTranslation Name="LASTNAME">Last Name</PropertyTranslation>
-  <!--Quickstart 2018 end-->
+  <!--Quickstart 2019 end-->
 
   <!--Classification-->
   <PropertyTranslation Name="SEGMENT">Segment</PropertyTranslation>

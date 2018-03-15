@@ -10,7 +10,7 @@
 #=============================================================================#
 #endregion
 
-# Version Info - VDS Quickstart Extension 2018.0.5
+# Version Info - VDS Quickstart Extension 2019.0.5
 
 #retrieve property value given by displayname from folder (ID)
 function mGetFolderPropValue ([Int64] $mFldID, [STRING] $mDispName)
@@ -125,7 +125,7 @@ function mGetFolderNumber($_FileNumber, $_nChar)
 function mGetUIStrings
 {
 	# check language override settings of VDS
-	[xml]$mDSLangFile = Get-Content "C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault\DSLanguages.xml"
+	[xml]$mDSLangFile = Get-Content "C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\DSLanguages.xml"
 	$mUICodes = $mDSLangFile.SelectNodes("/DSLanguages/Language_Code")
 	$mLCode = @{}
 	Foreach ($xmlAttr in $mUICodes)
@@ -139,7 +139,7 @@ function mGetUIStrings
 		$mVdsUi = $mLCode["UI"]
 	} 
 	Else{$mVdsUi=$PSUICulture}
-	[xml]$mUIStrFile = get-content ("C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\" + $mVdsUi + "\UIStrings.xml")
+	[xml]$mUIStrFile = get-content ("C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\" + $mVdsUi + "\UIStrings.xml")
 	$UIString = @{}
 	$xmlUIStrs = $mUIStrFile.SelectNodes("/UIStrings/UIString")
 	Foreach ($xmlAttr in $xmlUIStrs) {
@@ -155,7 +155,7 @@ function mGetUIStrings
 function mGetPropTranslations
 {
 	# check language override settings of VDS
-	[xml]$mDSLangFile = Get-Content "C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault\DSLanguages.xml"
+	[xml]$mDSLangFile = Get-Content "C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault\DSLanguages.xml"
 	$mUICodes = $mDSLangFile.SelectNodes("/DSLanguages/Language_Code")
 	$mLCode = @{}
 	Foreach ($xmlAttr in $mUICodes)
@@ -171,7 +171,7 @@ function mGetPropTranslations
 	Else{
 		$mVdsUi=$PSUICulture
 	}
-	[xml]$mPrpTrnsltnFile = get-content ("C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\" + $mVdsDb + "\PropertyTranslations.xml")
+	[xml]$mPrpTrnsltnFile = get-content ("C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\" + $mVdsDb + "\PropertyTranslations.xml")
 	$mPrpTrnsltns = @{}
 	$xmlPrpTrnsltns = $mPrpTrnsltnFile.SelectNodes("/PropertyTranslations/PropertyTranslation")
 	Foreach ($xmlAttr in $xmlPrpTrnsltns) {

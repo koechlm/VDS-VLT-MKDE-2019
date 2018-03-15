@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VLT_MKDE_2018.Properties
+namespace VLT_MKDE_2019.Properties
 {
 
 

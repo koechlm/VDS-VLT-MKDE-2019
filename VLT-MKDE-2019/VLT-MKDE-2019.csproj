@@ -43,6 +43,12 @@
     <Reference Include="CreateObject">
       <HintPath>C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\CreateObject.dll</HintPath>
     </Reference>
+    <Reference Include="dataStandard.Interfaces">
+      <HintPath>C:\ProgramData\Autodesk\Inventor 2019\Addins\Data Standard\dataStandard.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="dataStandard.UI">
+      <HintPath>C:\ProgramData\Autodesk\Inventor 2019\Addins\Data Standard\dataStandard.UI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -576,7 +582,7 @@
     <Resource Include="Vault.Custom\factory-edit.ico" />
     <Resource Include="Vault.Custom\factory-info.ico" />
     <Resource Include="Vault.Custom\factory.ico" />
-    <Resource Include="Vault.Custom\Folder2018.xml" />
+    <Resource Include="Vault.Custom\Folder2019.xml" />
     <Resource Include="Vault.Custom\GoToReplacedBy.ico" />
     <Resource Include="Vault.Custom\GoToSource.ico" />
     <Resource Include="Vault.Custom\Lock.ico" />

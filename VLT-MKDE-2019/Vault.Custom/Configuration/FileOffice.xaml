@@ -211,7 +211,7 @@
         </Style>
         <!-- This XmlDataProvider is used for defining Name/TemplatePath pairs that are used in the combo box "Document Type" and can be easily extended -->
         <XmlDataProvider x:Key="DocTypes"
-                         Source="C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\Configuration\FileOffice.xml"
+                         Source="C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\FileOffice.xml"
                          XPath="/DocTypeData" />
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
     </Window.Resources>
@@ -274,7 +274,7 @@
                                 Grid.Row="1" Margin="0,2,2,2">
                         <Button.Template>
                             <ControlTemplate>
-                                <Image x:Name="imgTemplateReset" Source="C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\filter-delete.ico" Margin="2" />
+                                <Image x:Name="imgTemplateReset" Source="C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\filter-delete.ico" Margin="2" />
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
@@ -413,7 +413,7 @@
                                 <Button.Template>
                                     <ControlTemplate>
                                         <Border BorderBrush="#FFABADB3" BorderThickness="1">
-                                            <Image x:Name="imgTemplateReset" Source="C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\filter-delete.ico" Margin="2" />
+                                            <Image x:Name="imgTemplateReset" Source="C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\filter-delete.ico" Margin="2" />
                                         </Border>
                                     </ControlTemplate>
                                 </Button.Template>
@@ -513,7 +513,7 @@
                             <Button.Template>
                                 <ControlTemplate>
                                     <Border BorderBrush="#FFABADB3" BorderThickness="1">
-                                        <Image x:Name="imgTemplateReset" Source="C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\filter-delete.ico" Margin="2" />
+                                        <Image x:Name="imgTemplateReset" Source="C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\filter-delete.ico" Margin="2" />
                                     </Border>
                                 </ControlTemplate>
                             </Button.Template>

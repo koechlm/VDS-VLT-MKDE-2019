@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("VLT-MKDE-2018")]
+[assembly: AssemblyTitle("VLT-MKDE-2019")]
 [assembly: AssemblyDescription("VDS Configuration Demo Environment Markus Koechl")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Autodesk GmbH")]
-[assembly: AssemblyProduct("VLT-MKDE-2018")]
+[assembly: AssemblyProduct("VLT-MKDE-2019")]
 [assembly: AssemblyCopyright("Copyright ©  2017 Autodesk, Markus Koechl")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -51,7 +51,7 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2018.1.0.0")]
-[assembly: AssemblyFileVersion("2018.1.0.0")]
+[assembly: AssemblyVersion("2019.1.0.0")]
+[assembly: AssemblyFileVersion("2019.1.0.0")]
 [assembly: NeutralResourcesLanguage("de-DE")]
 

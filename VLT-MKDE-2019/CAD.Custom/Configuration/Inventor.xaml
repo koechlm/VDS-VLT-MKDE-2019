@@ -492,7 +492,7 @@
                                 <Button.Template>
                                     <ControlTemplate>
                                         <Border BorderBrush="#FFABADB3" BorderThickness="1">
-                                            <Image x:Name="imgTemplateReset" Source="C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\filter-delete.ico" Margin="2" />
+                                            <Image x:Name="imgTemplateReset" Source="C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\filter-delete.ico" Margin="2" />
                                         </Border>
                                     </ControlTemplate>
                                 </Button.Template>
@@ -542,7 +542,7 @@
                                     <Button.Template>
                                         <ControlTemplate>
                                             <Border BorderBrush="#FFABADB3" BorderThickness="1">
-                                                <Image x:Name="imgTemplateReset" Source="C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\filter-delete.ico" Margin="2" />
+                                                <Image x:Name="imgTemplateReset" Source="C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\filter-delete.ico" Margin="2" />
                                             </Border>
                                         </ControlTemplate>
                                     </Button.Template>
@@ -624,7 +624,7 @@
                     </Grid>
                 </Grid>
             </TabItem>
-            <TabItem Header="Werksnormen" Height="26" IsTabStop="False">
+            <TabItem Header="{Binding UIString[], FallbackValue='Company Standards'}" Height="26" IsTabStop="False">
                 <Grid x:Name="grdCompStandard"  Width="{Binding ActualWidth, ElementName=grdFile, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=grdFile, Mode=OneWay}" MaxWidth="636" >
                     <DataGrid x:Name="dbGridSQL" >
                         <DataGrid.ContextMenu>

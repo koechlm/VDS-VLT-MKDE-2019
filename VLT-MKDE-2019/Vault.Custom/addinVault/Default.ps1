@@ -1,7 +1,7 @@
 ﻿
 #=============================================================================#
 # PowerShell script sample for Vault Data Standard                            #
-#			 Autodesk Vault - Quickstart 2018  								  #
+#			 Autodesk Vault - Quickstart 2019  								  #
 # This sample is based on VDS 2018 RTM and adds functionality and rules       #
 # All additions are marked with 'region Quickstart' - 'endregion'			  #
 #                                                                             #
@@ -142,7 +142,7 @@ function InitializeWindow
 			If ($dsWindow.FindName("tabTermsCatalog"))
 			{
 				Try{
-					Import-Module -FullyQualifiedName "C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\addinVault\CatalogTermsTranslations.psm1"
+					Import-Module -FullyQualifiedName "C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\CatalogTermsTranslations.psm1"
 				}
 				catch{
 					$dsWindow.FindName("tabTermsCatalog").Visibility = "Collapsed"
@@ -344,7 +344,7 @@ function OnTabContextChanged
 	#region Documentstructure Extension
 		if ($VaultContext.SelectedObject.TypeId.SelectionContext -eq "FileMaster" -and $xamlFile -eq "DocumentStructure.xaml")
 		{
-			Add-Type -Path 'C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\addinVault\UsesWhereUsed.dll'
+			Add-Type -Path 'C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\addinVault\UsesWhereUsed.dll'
 			$file = $vault.DocumentService.GetLatestFileByMasterId($vaultContext.SelectedObject.Id)
 			$treeNode = New-Object UsesWhereUsed.TreeNode($file, $vaultConnection)
 			$dsWindow.FindName("Uses").ItemsSource = @($treeNode)
@@ -382,7 +382,7 @@ function OnTabContextChanged
 	{
 		$mCoId = $VaultContext.SelectedObject.Id
 		
-		[System.Reflection.Assembly]::LoadFrom($Env:ProgramData + "\Autodesk\Vault 2018\Extensions\DataStandard" + '\Vault.Custom\addinVault\QuickstartUtilityLibrary.dll')
+		[System.Reflection.Assembly]::LoadFrom($Env:ProgramData + "\Autodesk\Vault 2019\Extensions\DataStandard" + '\Vault.Custom\addinVault\QuickstartUtilityLibrary.dll')
 		$_mVltHelpers = New-Object QuickstartUtilityLibrary.VltHelpers
 
 		#to get links of COs to CUSTENT we need to analyse the CUSTENTS for linked children of type CO
@@ -482,14 +482,14 @@ function OnTabContextChanged
 		
 			If (!$item.Locked)
 			{
-				$dsWindow.FindName("mDragAreaEnabled").Source = "C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\Configuration\Item\DragFilesActive.png"
+				$dsWindow.FindName("mDragAreaEnabled").Source = "C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\DragFilesActive.png"
 				$dsWindow.FindName("mDragAreaEnabled").Visibility = "Visible"
 				$dsWindow.FindName("mDragAreaDisabled").Visibility = "Collapsed"
 				$dsWindow.FindName("txtActionInfo").Visibility = "Visible"
 			}
 			Else
 			{
-				$dsWindow.FindName("mDragAreaDisabled").Source = "C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\Vault.Custom\Configuration\Item\DragFilesLocked.png"
+				$dsWindow.FindName("mDragAreaDisabled").Source = "C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\Vault.Custom\Configuration\Item\DragFilesLocked.png"
 				$dsWindow.FindName("mDragAreaDisabled").Visibility = "Visible"
 				$dsWindow.FindName("mDragAreaEnabled").Visibility = "Collapsed"
 				$dsWindow.FindName("txtActionInfo").Visibility = "Collapsed"
@@ -1058,7 +1058,7 @@ function mHelp ([Int] $mHContext) {
 				$mHPage = "Index.html";
 			}
 		}
-		$mHelpTarget = "C:\ProgramData\Autodesk\Vault 2018\Extensions\DataStandard\HelpFiles\"+$mHPage
+		$mHelpTarget = "C:\ProgramData\Autodesk\Vault 2019\Extensions\DataStandard\HelpFiles\"+$mHPage
 		$mhelpfile = Invoke-Item $mHelpTarget 
 	}
 	Catch

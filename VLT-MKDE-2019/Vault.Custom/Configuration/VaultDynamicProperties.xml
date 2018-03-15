@@ -336,8 +336,8 @@
     <DynamicProperty>Material</DynamicProperty>
     <DynamicProperty>Gewicht</DynamicProperty>
     <DynamicProperty>Halbzeugnummer</DynamicProperty>
-    <DynamicProperty>Abmessungen</DynamicProperty>
     <DynamicProperty>Halbzeug</DynamicProperty>
+    <DynamicProperty>Abmessungen</DynamicProperty>
     <DynamicProperty>Länge (Zuschnitt)</DynamicProperty>
     <DynamicProperty>Blechstärke</DynamicProperty>
     <DynamicProperty Hidden="True">Anwendungsversion</DynamicProperty>
@@ -354,8 +354,8 @@
     <DynamicProperty>Material</DynamicProperty>
     <DynamicProperty>Gewicht</DynamicProperty>
     <DynamicProperty>Halbzeugnummer</DynamicProperty>
-    <DynamicProperty>Abmessungen</DynamicProperty>
     <DynamicProperty>Halbzeug</DynamicProperty>
+    <DynamicProperty>Abmessungen</DynamicProperty>
     <DynamicProperty>Länge (Zuschnitt)</DynamicProperty>
     <DynamicProperty Hidden="True">Anwendungsversion</DynamicProperty>
     <DynamicProperty>EV-Kennung</DynamicProperty>
@@ -371,8 +371,8 @@
     <DynamicProperty>Material</DynamicProperty>
     <DynamicProperty>Gewicht</DynamicProperty>
     <DynamicProperty>Halbzeugnummer</DynamicProperty>
-    <DynamicProperty>Abmessungen</DynamicProperty>
     <DynamicProperty>Halbzeug</DynamicProperty>
+    <DynamicProperty>Abmessungen</DynamicProperty>
     <DynamicProperty Hidden="True">Anwendungsversion</DynamicProperty>
     <DynamicProperty>EV-Kennung</DynamicProperty>
     <DynamicProperty>Werksnorm</DynamicProperty>
@@ -409,5 +409,22 @@
     <DynamicProperty>Ersetzt durch</DynamicProperty>
     <DynamicProperty Hidden="True">Name des Bauteiltyps</DynamicProperty>
     <DynamicProperty Hidden="True">Letzte Aktualisierung mit</DynamicProperty>
+  </DynamicPropertiesCategory>
+  <DynamicPropertiesCategory Category="Schweissbaugruppe" Type="File">
+    <DynamicProperty>Titel</DynamicProperty>
+    <DynamicProperty>Titel EN</DynamicProperty>
+    <DynamicProperty>Beschreibung</DynamicProperty>   
+    <DynamicProperty>Teilenummer</DynamicProperty>
+    <DynamicProperty>Abmessungen</DynamicProperty>
+    <DynamicProperty>Gewicht</DynamicProperty>
+    <DynamicProperty>Ersetzt durch</DynamicProperty>
+    <DynamicProperty>Anwendungsversion</DynamicProperty>
+    <DynamicProperty>Statik geprüft am</DynamicProperty>
+    <DynamicProperty>Statik geprüft von</DynamicProperty>
+    <DynamicProperty>SFI geprüft am</DynamicProperty>
+    <DynamicProperty>SFI geprüft von</DynamicProperty>
+    <DynamicProperty>Entstanden aus</DynamicProperty>
+    <DynamicProperty>Werksnorm</DynamicProperty>
+    <DynamicProperty>EV-Kennung</DynamicProperty>
   </DynamicPropertiesCategory>
 </DynamicProperties>
