@@ -47,7 +47,7 @@
       <HintPath>C:\ProgramData\Autodesk\Inventor 2019\Addins\Data Standard\dataStandard.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="dataStandard.UI">
-      <HintPath>C:\ProgramData\Autodesk\Inventor 2019\Addins\Data Standard\dataStandard.UI.dll</HintPath>
+      <HintPath>C:\ProgramData\Autodesk\ApplicationPlugins\Autodesk DataStandard 2019.bundle\Contents\dataStandard.UI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
