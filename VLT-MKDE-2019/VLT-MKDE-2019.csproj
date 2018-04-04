@@ -92,13 +92,18 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Vault.Custom\addinVault\ADSK.QS.DerivationTree.ps1" />
+    <None Include="Vault.Custom\addinVault\Menus\ADSK.QS.GoToInvSibling.ps1" />
+    <None Include="Vault.Custom\addinVault\Menus\ADSK.QS.GoToReplacedBy.ps1" />
+    <None Include="Vault.Custom\addinVault\Menus\ADSK.QS.GoToSelectedFile.ps1" />
+    <None Include="Vault.Custom\addinVault\Menus\ADSK.QS.GoToSourceFile.ps1" />
+    <None Include="Vault.Custom\addinVault\Menus\ADSKFilePropProvider.ps1" />
     <None Include="Vault.Custom\addinVault\AssociatedCustents.ps1" />
     <None Include="Vault.Custom\addinVault\AssociatedFiles.ps1" />
     <None Include="Vault.Custom\addinVault\CAD-BOM-Cutlist.rdlc" />
     <None Include="Vault.Custom\addinVault\CAD-BOM.rdlc" />
     <None Include="Vault.Custom\addinVault\CatalogTermsTranslations.psm1" />
     <None Include="Vault.Custom\addinVault\Default.ps1" />
-    <None Include="Vault.Custom\addinVault\DerivationTree.ps1" />
     <None Include="Vault.Custom\addinVault\ERPTab.ps1" />
     <None Include="Vault.Custom\addinVault\ERPTabForItem.ps1" />
     <None Include="Vault.Custom\addinVault\FileBOM.ps1" />
@@ -114,14 +119,9 @@
     <None Include="Vault.Custom\addinVault\Menus\EditCustomObjectTerm.ps1" />
     <None Include="Vault.Custom\addinVault\Menus\EditFile.ps1" />
     <None Include="Vault.Custom\addinVault\Menus\EditFolder.ps1" />
-    <None Include="Vault.Custom\addinVault\Menus\GoToReplacedBy.ps1" />
-    <None Include="Vault.Custom\addinVault\Menus\GoToSourceFile.ps1" />
+    <None Include="Vault.Custom\addinVault\Menus\mInvInsertCopy.ps1" />
     <None Include="Vault.Custom\addinVault\Menus\ReserveNumbers.ps1" />
-    <None Include="Vault.Custom\addinVault\Menus\sample1.ps1" />
-    <None Include="Vault.Custom\addinVault\Menus\Select Folder.ps1" />
-    <None Include="Vault.Custom\addinVault\Menus\ShowAboutDialog.ps1" />
     <None Include="Vault.Custom\addinVault\Menus\showCustomHelp.ps1" />
-    <None Include="Vault.Custom\addinVault\Menus\ShowLog.ps1" />
     <None Include="Vault.Custom\addinVault\ProjectOrganisationLink.ps1" />
     <None Include="Vault.Custom\addinVault\QuickstartExtension.ps1" />
     <None Include="Vault.Custom\addinVault\ReserveFileNumber.ps1" />
@@ -190,15 +190,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Vault.Custom\Configuration\File\ADSK.QS.DerivationTree.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Vault.Custom\Configuration\File\CAD BOM.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Vault.Custom\Configuration\File\Datasheet.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Vault.Custom\Configuration\File\Derivation Tree.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -299,6 +299,10 @@
   <UIString ID="DerivationTree_14">Es konnten keine Parallel-Kopien ermittelt werden.</UIString>
   <UIString ID="DerivationTree_15">Es wurden keine Kopien der gewählten Datei ermittelt.</UIString>
   <UIString ID="DerivationTree_16">Anzeige auf Seitengröße {0} begrenzt; Gesamtanzahl ermittelter Dateiversionen: {1}</UIString>
+  <UIString ID="DerivationTree_17">Ansicht Aktualisieren</UIString>
+  <UIString ID="DerivationTree_18">Ansicht automatisch aktualisieren</UIString>
+  <UIString ID="DerivationTree_19">Startet alle Sucheanfragen, um Ansicht zu füllen</UIString>
+  <UIString ID="DerivationTree_20">Ansicht wird über Datei-Selektion aktualisiert. - Achtung: Zeitbedarf variiert nach Tresor- und Anzeigegröße!</UIString>
   <!--Derivation Tree end-->
 
   <!--Document Structure Tab Extension-->

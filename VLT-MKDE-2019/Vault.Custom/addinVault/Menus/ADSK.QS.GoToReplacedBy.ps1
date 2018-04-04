@@ -15,7 +15,7 @@ $UIString = mGetUIStrings
 
 #region variables
 # change the quoted display name according your Vault Property Definition
-	$_ReplacedByFilePropDispName = "Ersetzt durch"
+	$_ReplacedByFilePropDispName = $UIString["ADSK-GoToNavigation_Prop02"]
 #endregion
 
 $currentSelected = $vaultContext.CurrentSelectionSet[0]

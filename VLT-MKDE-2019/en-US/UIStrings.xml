@@ -295,6 +295,10 @@
   <UIString ID="DerivationTree_14">Could not find parallel copied files</UIString>
   <UIString ID="DerivationTree_15">Could not find any copy of the selected file</UIString>
   <UIString ID="DerivationTree_16">Search result is limited to page size {0}; Total number of files found: {1}</UIString>
+  <UIString ID="DerivationTree_17">Update View</UIString>
+  <UIString ID="DerivationTree_18">Auto Update View</UIString>
+  <UIString ID="DerivationTree_19">Run all searches to fill each branch</UIString>
+  <UIString ID="DerivationTree_20">Updates view on selection changed. Note - Delayed response depending on vault and paging size!</UIString>
   <!--Derivation Tree end-->
 
   <!--Document Structure Tab Extension-->
