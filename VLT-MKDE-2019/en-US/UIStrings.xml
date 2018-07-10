@@ -200,7 +200,6 @@
   <UIString ID="MSDCE_TubePipe_01">Tube and Pipe</UIString>
   <!--Quickstart Functional Dialogs (FG, DA, TP, CH) end-->
 
-
   <!--Quickstart Custom Object Names-->
   <UIString ID="MSDCE_CO01">Organisation</UIString>
   <UIString ID="MSDCE_CO02">Person</UIString>
