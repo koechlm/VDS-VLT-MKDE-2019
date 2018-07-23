@@ -86,45 +86,45 @@ function m_SearchTerms ([STRING] $mSearchText1) {
 		$_i = 0
 
 		#the default search condition object type is custom object "term"
-		$srchConds[$_i]= mCreateSearchCond $UIString["ClassTerms_08"] $UIString["ClassTerms_00"] "AND" #Search in "Category Name" = "Term"
+		$srchConds[$_i]= mCreateClsSearchCond $UIString["ClassTerms_08"] $UIString["ClassTerms_00"] "AND" #Search in "Category Name" = "Term"
 		$_i += 1
 
 		#add other conditions by settings read from dialog
 		IF ($dsWindow.FindName("chkDE").IsChecked -eq $true) {
-			$srchConds[$_i]= mCreateSearchCond $UIString["ClassTerms_09"] $mSearchText1 "OR"
+			$srchConds[$_i]= mCreateClsSearchCond $UIString["ClassTerms_09"] $mSearchText1 "OR"
 			$_i += 1
 		}
 		IF ($dsWindow.FindName("chkEN").IsChecked -eq $true) {
-			$srchConds[$_i]= mCreateSearchCond $UIString["ClassTerms_10"] $mSearchText1 "OR" 
+			$srchConds[$_i]= mCreateClsSearchCond $UIString["ClassTerms_10"] $mSearchText1 "OR" 
 			$_i += 1
 		}
 		IF ($dsWindow.FindName("chkFR").IsChecked -eq $true) {
-			$srchConds[$_i]= mCreateSearchCond $UIString["ClassTerms_11"] $mSearchText1 "OR" 
+			$srchConds[$_i]= mCreateClsSearchCond $UIString["ClassTerms_11"] $mSearchText1 "OR" 
 			$_i += 1
 		}
 		IF ($dsWindow.FindName("chkIT").IsChecked -eq $true) {
-			$srchConds[$_i]= mCreateSearchCond $UIString["ClassTerms_12"] $mSearchText1 "OR" 
+			$srchConds[$_i]= mCreateClsSearchCond $UIString["ClassTerms_12"] $mSearchText1 "OR" 
 			$_i += 1
 		}
 		# if filters are used limit the search to the classification groups. Apply AND conditions
 		IF ($mBreadCrumb.Children[1].SelectedIndex -ge 0) {
 			$mSearchGroupName = $mBreadCrumb.Children[1].Text
-			$srchConds[$_i]= mCreateSearchCond $UIString["Class_00"] $mSearchGroupName "AND" #search in Segment class
+			$srchConds[$_i]= mCreateClsSearchCond $UIString["Class_00"] $mSearchGroupName "AND" #search in Segment class
 			$_i += 1
 		}
 				IF ($mBreadCrumb.Children[2].SelectedIndex -ge 0) {
 			$mSearchGroupName = $mBreadCrumb.Children[2].Text
-			$srchConds[$_i]= mCreateSearchCond $UIString["Class_01"] $mSearchGroupName "AND" 
+			$srchConds[$_i]= mCreateClsSearchCond $UIString["Class_01"] $mSearchGroupName "AND" 
 			$_i += 1
 		}
 		IF ($mBreadCrumb.Children[3].SelectedIndex -ge 0) {
 			$mSearchGroupName = $mBreadCrumb.Children[3].Text
-			$srchConds[$_i]= mCreateSearchCond $UIString["Class_02"] $mSearchGroupName "AND" 
+			$srchConds[$_i]= mCreateClsSearchCond $UIString["Class_02"] $mSearchGroupName "AND" 
 			$_i += 1
 		}
 		IF ($mBreadCrumb.Children[4].SelectedIndex -ge 0) {
 			$mSearchGroupName = $mBreadCrumb.Children[4].Text
-			$srchConds[$_i]= mCreateSearchCond $UIString["Class_03"] $mSearchGroupName "AND" 
+			$srchConds[$_i]= mCreateClsSearchCond $UIString["Class_03"] $mSearchGroupName "AND" 
 			$_i += 1
 		}
 		$dsDiag.Trace(" search conditions build") 
@@ -175,7 +175,7 @@ function m_SearchTerms ([STRING] $mSearchText1) {
 
 }
 
-function mCreateSearchCond ([String] $PropName, [String] $mSearchTxt, [String] $AndOr) {
+function mCreateClsSearchCond ([String] $PropName, [String] $mSearchTxt, [String] $AndOr) {
 	$dsDiag.Trace("--SearchCond creation starts... for $PropName and $mSearchTxt ---")
 	$srchCond = New-Object autodesk.Connectivity.WebServices.SrchCond
 	$propDefs = $vault.PropertyService.GetPropertyDefinitionsByEntityClassId("CUSTENT")

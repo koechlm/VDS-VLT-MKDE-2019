@@ -93,7 +93,7 @@ function InitializeTabWindow
 }
 
 function InitializeWindow
-{	      
+{
 	#begin rules applying commonly
       
 	$Prop["_Category"].add_PropertyChanged({

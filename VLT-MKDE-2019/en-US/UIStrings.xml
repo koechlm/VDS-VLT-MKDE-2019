@@ -409,5 +409,9 @@
   <!--Insert CAD Copy-->
   <UIString ID="ADSK-InsertInvCopy_00">Insert CAD: Component Copy</UIString>
   <!--Insert CAD Copy-->
+
+  <!--ADSK-File-Property-Reader-->
+  <UIString ID="ADSK-FilePropRead-00">Manufacturer</UIString>
+  <!--ADSK-File-Property-Reader End-->
   
 </UIStrings>

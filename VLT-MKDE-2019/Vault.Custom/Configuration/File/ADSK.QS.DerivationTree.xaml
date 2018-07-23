@@ -6,7 +6,7 @@
                 x:Name="MainWindow"
               behaviours:TabTitleBehavior.TabTitle="$UIString[DerivationTree_00]" d:DesignWidth="720" d:DesignHeight="340">
     <UserControl.Resources>
-        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
+        <Style x:Key="LabelStyle" TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
             <Style.Triggers>
                 <DataTrigger Binding="{Binding Content, RelativeSource={RelativeSource Self}}" Value="{x:Null}">
                     <Setter Property="BorderThickness" Value="1"/>

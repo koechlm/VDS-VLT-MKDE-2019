@@ -107,6 +107,12 @@
     <None Include="CAD.Custom\addins\ItemLookup.ps1" />
     <None Include="CAD.Custom\Configuration\AutoCAD.cfg" />
     <None Include="CAD.Custom\Configuration\Inventor.cfg" />
+    <None Include="CAD\addins\breadCrumb.ps1" />
+    <None Include="CAD\addins\Default.ps1" />
+    <None Include="CAD\addins\FileNameValidation.ps1" />
+    <None Include="CAD\Configuration\AutoCAD-Vanilla.cfg" />
+    <None Include="CAD\Configuration\AutoCAD.cfg" />
+    <None Include="CAD\Configuration\Inventor.cfg" />
     <None Include="HelpFiles\debug.log" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -175,6 +181,38 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="CAD.Custom\Configuration\TubeAndPipe.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CAD\Configuration\AutoCAD-Vanilla.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CAD\Configuration\AutoCAD.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CAD\Configuration\CableAndHarness.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CAD\Configuration\DesignAccelerator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CAD\Configuration\FrameGenerator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CAD\Configuration\Inventor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CAD\Configuration\SaveCopyAs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CAD\Configuration\TubeAndPipe.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
